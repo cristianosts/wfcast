@@ -70,13 +70,13 @@ export default function Page() {
 
       {weather && (
         <div className="resultado w-72 justify-center mx-auto border-4 rounded-xl items-center md:w-1/2">
-          <div className="titulo font-bold text-xl text-center mt-5">{weather.name}, {weather.country}</div>
-          <div className="temp flex flex-col items-center">
-            <div className="tempTitulo font-medium m-2">Temperature</div>
+          <div className="titulo font-bold text-xl text-center mt-5 ">{weather.name}, {weather.country}</div>
+          <div className="temp flex flex-col items-center lg:flex-row lg:justify-around lg:items-center lg:p-5">
+            <div className="tempTitulo font-medium m-2 ">Temperature</div>
             <div className="tempInfo text-4xl">{weather.temp} <sup>°C</sup></div>
             <img className="w-24 h-24" src={`http://openweathermap.org/img/wn/${weather.tempIcon}.png`} alt="Weather Icon" />
           </div>
-          <div className="vento flex flex-col items-center">
+          <div className="vento flex flex-col items-center lg:flex-row lg:justify-around lg:items-center lg:p-5">
             <div className="ventoTitulo font-medium">Wind</div>
             <div className="ventoInfo m-2 font-medium text-2xl">{weather.windSpeed} <span>km/h</span></div>
             <div className="ventoArea w-12 h-12 m-4 border border-black rounded-full pl-6 pt-6 md:mt-8">
