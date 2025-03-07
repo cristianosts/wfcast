@@ -97,7 +97,7 @@ export default function Page() {
         </div>
       )}
 
-      <footer class="text-center mt-40 md:m-40 italic">Created by Cristiano</footer>
+      <footer className="text-center mt-40 md:m-40 italic">Created by Cristiano</footer>
 
     </div>
   );
