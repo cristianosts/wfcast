@@ -1,11 +1,20 @@
 "use client"
 
+interface WeatherData {
+  name: string;
+  country: string;
+  temp: number;
+  tempIcon: string;
+  windSpeed: number;
+  windAngle: number; 
+}
+
 import { useState, useEffect } from "react";
 import { Header } from "./components/header";
 
 export default function Page() {
   const [search, setSearch] = useState("");
-  const [weather, setWeather] = useState(null);
+  const [weather, setWeather] = useState < WeatherData | null >(null);
   const [warning, setWarning] = useState("");
 
   useEffect(() => {
@@ -15,7 +24,7 @@ export default function Page() {
     }
   }, [search]);
 
-  const fetchWeather = async (event) => {
+  const fetchWeather = async (event:React.FormEvent) => {
     event.preventDefault();
     if (!search.trim()) return;
 
