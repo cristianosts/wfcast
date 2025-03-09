@@ -1,2 +1,2 @@
 # wfcast
- getting API dates
+ getting API data
