@@ -63,7 +63,7 @@ export default function Page() {
     <div className="flex flex-col items-center p-4">
       <Header/>
       
-      <form onSubmit={fetchWeather} className="busca flex justify-center gap-1 mt-20 mb-8 md:m-10">
+      <form onSubmit={fetchWeather} className="busca flex justify-center gap-1 mt-10 mb-8 md:m-10">
         <input
           type="text"
           id="searchInput"
